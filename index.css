@@ -25,6 +25,7 @@ h1 {
     font-size: 1.5em; 
     color: #EFBCE6;
     margin: 0 0 5px 15px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
 }
 
 .boutons-menu {
@@ -33,10 +34,14 @@ h1 {
     margin: 0 15px 0 0;
 }
 
+.bouton-carre {
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
 .div-body {
     width: 92%;
     border: 2px solid #333;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
     border-radius: 10px;
 }
 
@@ -52,7 +57,7 @@ h1 {
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
     display: block;
     margin: auto;
 }
@@ -72,19 +77,21 @@ h1 {
     gap: 0;
 }
 
-h4 {
+.notes {
     align-self: flex-start; /* Aligne le h4 à gauche */
     margin: 0 0 0 10px;
     padding: 0;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 textarea {
     width: 80vw;
     height: 65px;
     background-color: transparent; /* Fond transparent */
-    border: 1.5px dotted black; /* Bordure en pointillés noirs */
+    border: 1.3px dotted black; /* Bordure en pointillés noirs */
     resize: none;
     outline: none;
     font-family: "Pixelify Sans", serif;
     margin: 0;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
