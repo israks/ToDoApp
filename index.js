@@ -6,7 +6,7 @@ app.whenReady().then(() => {
   mainWindow = new BrowserWindow({
     width: 350,
     height: 450,
-    //frame: false,
+    frame: false,
     webPreferences: {
       nodeIntegration: true,
     },

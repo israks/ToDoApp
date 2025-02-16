@@ -4,42 +4,87 @@ body {
     justify-content: center; /* Centre les pavés horizontalement */
     min-height: 100vh;
     align-items: center; /* Centre les pavés verticalement si la hauteur de body est définie */
-    gap: 20px;
-    background-color: white;
-    margin: 0;
+    gap: 10px;
+    background-color: #2A2838;
+    margin: 0 15px 0 15px;
     padding: 0;
     font-family: "Pixelify Sans", serif;
+    font-weight: thin;
 }
 
 header {
-    margin: 0;
-    padding: 0;
+    width: 100%;
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
 h1 {
-    margin: 0;
-    padding: 0;
     font-size: 1.5em; 
-    text-align: left;
+    color: #EFBCE6;
+    margin: 0 0 5px 15px;
+}
+
+.boutons-menu {
+    display: flex;
+    gap: 5px;
+    margin: 0 15px 0 0;
+}
+
+.div-body {
+    width: 92%;
+    border: 2px solid #333;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
 }
 
 #div-todolist {
-    background-color: aquamarine;
-    width: 92%;
-    height: 200px;
-    border: 2px solid #333;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    background-image: url("images/PartieToDo.jpg");
+    height: 250px;
+}
+
+#customButton {
+    background-color: #E1B6E8;
+    border: solid 1px;
+    font-family: "Pixelify Sans", serif;
     border-radius: 10px;
-    margin: 0 5px 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    display: block;
+    margin: auto;
+}
+
+#customButton:hover {
+    background-color: #F4DDF7; 
+    transform: scale(1.02);
 }
 
 #div-notes {
-    background-color: aqua;
-    width: 92%;
+    background-image: url("images/PartieNotes.jpg");
     height: 100px;
-    border: 2px solid #333;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    margin: 5px 5px 10px 5px;
+    display: flex;
+    flex-direction: column; /* Empile les enfants verticalement */
+    align-items: center; /* Centre le textarea */
+    justify-content: center; /* Centre verticalement dans le div */
+    gap: 0;
+}
+
+h4 {
+    align-self: flex-start; /* Aligne le h4 à gauche */
+    margin: 0 0 0 10px;
+    padding: 0;
+}
+
+textarea {
+    width: 80vw;
+    height: 65px;
+    background-color: transparent; /* Fond transparent */
+    border: 1.5px dotted black; /* Bordure en pointillés noirs */
+    resize: none;
+    outline: none;
+    font-family: "Pixelify Sans", serif;
+    margin: 0;
 }
