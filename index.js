@@ -4,7 +4,7 @@ let mainWindow;
 
 app.whenReady().then(() => {
   mainWindow = new BrowserWindow({
-    width: 350,
+    width: 320,
     height: 450,
     frame: false,
     webPreferences: {
@@ -13,4 +13,5 @@ app.whenReady().then(() => {
   });
 
   mainWindow.loadFile('index.html');
+
 });

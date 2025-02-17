@@ -6,6 +6,7 @@
         <title>To-Do App</title>
         <link rel="stylesheet" href="index.css">
         <script type="module" src="./index.js"></script>
+        <script type="module" src="boutons.js" defer></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
@@ -15,18 +16,21 @@
         <header>
             <h1>To-Do List <3</h1>
             <div class="boutons-menu">
-                <img src="images/BoutonReduire.png" alt="BoutonReduire" class="boutoncarre" id="boutonreduire">
-                <img src="images/BoutonFermer.png" alt="BoutonFermer" class="boutoncarre" id="boutonfermer">
+                <img src="images/BoutonReduire.png" alt="BoutonReduire" id="boutonreduire">
+                <img src="images/BoutonFermer.png" alt="BoutonFermer" id="boutonfermer">
             </div>
         </header>
 
         <div class="div-body" id="div-todolist">
-            <button id="customButton">+ Add a task</button>
+            <div id="all-tasks-div"></div>
+            <div id="addbutton-div">
+                <button id="addTaskButton">+ Add a task</button>
+            </div>
         </div>
         <div class="div-body" id="div-notes">
             <h4 class="notes">Notes</h4>
             <div class="textarea-wrapper">
-                <textarea name="notes" id="notes"></textarea>
+                <textarea name="notes" id="espace-notes" spellcheck="false"></textarea>
             </div>
         </div>
         
