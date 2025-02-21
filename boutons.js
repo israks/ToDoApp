@@ -1,3 +1,5 @@
+const { ipcRenderer } = require('electron');
+
 document.addEventListener("DOMContentLoaded", () => {
     
     const imageReduire = document.getElementById("boutonreduire");
@@ -8,6 +10,10 @@ document.addEventListener("DOMContentLoaded", () => {
   
     imageReduire.addEventListener("mouseleave", () => {
       imageReduire.src = "images/BoutonReduire.png";
+    });
+
+    imageReduire.addEventListener('click', () => {
+      ipcRenderer.send('minimize-window');
     });
 
 
@@ -24,8 +30,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     const divParent = document.getElementById("div-todolist");
-    const divTaches = document.getElementsById("all-tasks-div");
-    const buttonDiv = document.getElementById("addTaskButton");
+    const divTaches = document.getElementById("all-tasks-div");
+    const addTask = document.getElementById("addTaskButton");
 
     let firstClick = true;
 
@@ -48,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
         divTaches.prepend(divPremiereTache);
-        buttonDiv.dataset.clicked = "true";
+        addTask.dataset.clicked = "true";
 
         if (firstClick) {
             // Ajouter le div en bas la première fois
@@ -56,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
             firstClick = false;  // On change l'état après le premier clic
 
             // Déplacer le bouton en bas
-            divParent.appendChild(buttonDiv);  // Déplace le bouton en bas du parent
+            divParent.appendChild(addTask);  // Déplace le bouton en bas du parent
             firstClick = false; 
         } else {
             divTaches.prepend(divPremiereTache);

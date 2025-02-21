@@ -124,7 +124,7 @@ h1 {
 
 
 .espaceTexteToDo {
-    width: 70vw; /* Remplir la largeur disponible */
+    width: 65vw; /* Remplir la largeur disponible */
     height: 22px; /* Hauteur du textarea */
     background-color: transparent; /* Fond transparent */
     border: none; /* Pas de bordure */
@@ -159,13 +159,14 @@ h1 {
 }
 
 #espace-notes {
-    width: 80vw;
+    width: 75vw;
     height: 65px;
     background-color: transparent; /* Fond transparent */
     border: 1.3px dotted black; /* Bordure en pointillés noirs */
     resize: none;
     outline: none;
     font-family: "Pixelify Sans", serif;
+    font-weight: 500;
     margin: 0;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
     font-size: 11px;
